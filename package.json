@@ -2,16 +2,56 @@
   "name": "ba-d3",
   "version": "1.0.0",
   "description": "Playground for all d3.js lessons from MCIIV",
+  "private": true,
   "keywords": [
     "d3",
     "d3js"
   ],
   "author": "Carl Richter",
   "license": "MIT",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "serve": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
+    "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
+    "build:production": "webpack --config configuration/webpack.prod.config.js --mode=production"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.1",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "postcss": "^8.2.10",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "svgo": "^2.3.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.32.0",
-    "webpack-cli": "^4.6.0"
+    "webpack-bundle-analyzer": "^4.4.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "d3": "^6.6.2"
   }
 }
