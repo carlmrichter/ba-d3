@@ -1,0 +1,17 @@
+{
+  "name": "ba-d3",
+  "version": "1.0.0",
+  "description": "Playground for all d3.js lessons from MCIIV",
+  "keywords": [
+    "d3",
+    "d3js"
+  ],
+  "author": "Carl Richter",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
