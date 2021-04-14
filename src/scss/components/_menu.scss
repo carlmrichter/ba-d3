@@ -1,0 +1,13 @@
+.menu {
+    position: fixed;
+    width: 200px;
+    box-shadow: elevation-box-shadow(4);
+    padding: 24px;
+    height: 100%;
+
+    &__link {
+        display: block;
+        padding: 4px 0;
+        font-weight: 700;
+    }
+}

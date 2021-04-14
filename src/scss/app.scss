@@ -1,3 +1,10 @@
+// base
 @import "base/reset";
 @import "base/fonts";
+@import "base/variables";
+@import "base/elevation";
 @import "base/common";
+
+// components
+@import "components/menu";
+
