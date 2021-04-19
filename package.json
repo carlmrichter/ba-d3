@@ -54,7 +54,6 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@hpcc-js/wasm": "^1.4.1",
     "@material/elevation": "^10.0.0",
     "d3": "^6.6.2",
     "d3-graphviz": "^4.0.0"

@@ -1,7 +1,11 @@
 import '../scss/app.scss'
-import './03'
-import './04'
-import {probeklausur05, probeklausur08} from './probeklausur'
+import {lesson03BarCharts, lesson03PieCharts} from './03'
+import { probeklausur05, probeklausur07, probeklausur08 } from './probeklausur'
 
-probeklausur05()
-probeklausur08()
+document.addEventListener('DOMContentLoaded', () => {
+    lesson03BarCharts()
+    lesson03PieCharts()
+    probeklausur05()
+    probeklausur07()
+    probeklausur08()
+})
