@@ -1,0 +1,13 @@
+.lesson {
+    padding: 2rem 0 4rem 0;
+    border-bottom: 1px solid #ccc;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
