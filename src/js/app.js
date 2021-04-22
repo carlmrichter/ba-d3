@@ -3,6 +3,7 @@ import * as d3 from 'd3'
 import {lesson03BarCharts, lesson03PieCharts} from './03'
 import { lesson04Functions } from './04'
 import { probeklausur05, probeklausur07, probeklausur08 } from './probeklausur'
+import { importCsv, importJson, importXML } from './importData'
 
 function test() {
     const padding = { top: 50, bottom: 50, left: 50, right: 50 }
@@ -26,7 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log(d3.timeFormat('%X')(new Date()))
 
+    console.log(d3.schemeBrBG[9])
 
+    importCsv()
+    importJson()
+    importXML()
     lesson03BarCharts()
     lesson03PieCharts()
     lesson04Functions()

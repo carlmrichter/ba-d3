@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <data>
+        <sex>M</sex>
+        <weight>93</weight>
+        <bmi>25.57</bmi>
+    </data>
+    <data>
+        <sex>F</sex>
+        <weight>68</weight>
+        <bmi>20.10</bmi>
+    </data>
+    <data>
+        <sex>M</sex>
+        <weight>59</weight>
+        <bmi>17.40</bmi>
+    </data>
+</root>

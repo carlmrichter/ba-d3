@@ -110,28 +110,48 @@ export function lesson03PieCharts () {
 
     const width = 400
     const height = 400
+    const padding = {top: 20, bottom: 20, left: 120, right: 20}
+    // innere Breite, für scale-Funktionen etc. verwenden
+    const innerWidth = width - padding.left - padding.right
+    // innere Höhe, für scale-Funktionen etc. verwenden
+    const innerHeight = height - padding.top - padding.bottom
     const svg = d3.select('#lesson03')
                   .append('svg')
                   .attr('width', width)
                   .attr('height', height)
-                  .append('g')
-                  .attr('transform', `translate(${width / 2}, ${height / 2})`)
+                  .style('background', '#f0f0f0')
+                  .append('g').attr('transform', `translate(${padding.left}, ${padding.top})`)
 
+    const pieGroup = svg.append('g').attr('transform', `translate(${innerWidth / 2}, ${innerHeight / 2})`)
+    const radius = Math.min(innerHeight, innerWidth) / 2
     const pie = d3.pie().value(d => d.votes).padAngle(.025)(data)
     const colors = d3.scaleOrdinal().domain(pie.map(d => d.index)).range(d3.schemeCategory10)
-    const arcMaker = d3.arc().innerRadius(30).outerRadius(175).cornerRadius(4)
+    const arcMaker = d3.arc().innerRadius(30).outerRadius(radius).cornerRadius(4)
 
-    svg.selectAll().data(pie).enter().append('path').attr('d', arcMaker).attr('fill', d => colors(d.index))
+    pieGroup.selectAll().data(pie).enter().append('path').attr('d', arcMaker).attr('fill', d => colors(d.index))
 
-    svg.selectAll('text')
+    pieGroup.selectAll()
        .data(pie)
        .enter()
        .append('text')
        .text(d => d.data.name)
-       .attr('x', d => arcMaker.innerRadius(120).centroid(d)[0])
-       .attr('y', d => arcMaker.innerRadius(120).centroid(d)[1])
+       .attr('x', d => arcMaker.innerRadius(radius - 60).centroid(d)[0])
+       .attr('y', d => arcMaker.innerRadius(radius - 60).centroid(d)[1])
        .attr('font-family', 'sans-serif')
        .attr('font-size', 11)
        .attr('text-anchor', 'middle')
        .attr('fill', 'white')
+
+    const legendSize = 20
+    const legend = svg.append('g').selectAll().data(pie).enter()
+    legend.append('rect')
+        .attr('x', -padding.left + 20).attr('y', (d, i) => i * (legendSize + 5))
+        .attr('width', legendSize).attr('height', legendSize)
+        .style('fill', d => colors(d.index))
+
+    legend.append('text').text(d => d.data.name)
+        .attr('x', -padding.left + 20 + legendSize * 1.2)
+        .attr('y', (d, i) => (i * (legendSize + 5) + legendSize / 2))
+        .attr('alignment-baseline', 'central')
+        .style('font-family', 'sans-serif').style('font-size', 14)
 }
