@@ -1,0 +1,131 @@
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+    width: 890px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+a {
+    color: #2980b9;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: none;
+    page-break-inside: avoid;
+    border-radius: 8px;
+}
+
+.hljs > code {
+    font-size: .8rem;
+}
+
+blockquote {
+    padding: 0 1em;
+    color: #777;
+    border-left: 0.25em solid #ddd;
+    background: transparent;
+}
+
+.emoji {
+    height: 1.4em;
+}
+
+:not(pre):not(.hljs)>code {
+    color: #000;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: .8rem;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: .2em .4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    page-break-inside: avoid;
+    margin-bottom: .3em;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
+    margin-top: 1.25em;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+    margin: -20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+.s1 {
+    flex-basis: calc(100% / 12 * 1);
+}
+
+.s2 {
+    flex-basis: calc(100% / 12 * 2);
+}
+
+.s3 {
+    flex-basis: calc(100% / 12 * 3);
+}
+
+.s4 {
+    flex-basis: calc(100% / 12 * 4);
+}
+
+.s5 {
+    flex-basis: calc(100% / 12 * 5);
+}
+
+.s6 {
+    flex-basis: calc(100% / 12 * 6);
+}
+
+.s7 {
+    flex-basis: calc(100% / 12 * 7);
+}
+
+.s8 {
+    flex-basis: calc(100% / 12 * 8);
+}
+
+.s9 {
+    flex-basis: calc(100% / 12 * 9);
+}
+
+.s10 {
+    flex-basis: calc(100% / 12 * 10);
+}
+
+.s11 {
+    flex-basis: calc(100% / 12 * 11);
+}
+
+.s12 {
+    flex-basis: calc(100% / 12 * 12);
+}

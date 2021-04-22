@@ -2,15 +2,14 @@ import * as d3 from 'd3'
 
 export function lesson04Functions () {
     const width = 600, height = 600
-    const padding = { top: 15, bottom: 40, left: 15, right: 15 }
+    const padding = { top: 15, bottom: 40, left: 40, right: 15 }
     const innerWidth = width - padding.left - padding.right
     const innerHeight = height - padding.top - padding.bottom
 
     const f = x => (Math.pow(x, 3) - (3 * Math.pow(x, 2)) - x + 3)
-
-    const step = 0.1
+    const step = 0.05
     const xInterval = [-2, 4]
-    const yInterval = [f(xInterval[0]), f(xInterval[1])]
+    const yInterval = [-15, 15]
 
     const data = d3.range(xInterval[0], xInterval[1] + step, step).map(f)
 

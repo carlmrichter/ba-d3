@@ -1,0 +1,5 @@
+{
+    "markdown-pdf.styles": [
+        "docs/pdf.css"
+    ]
+}

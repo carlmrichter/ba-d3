@@ -34,14 +34,31 @@ export function probeklausur07 () {
 }
 
 export function probeklausur08 () {
-    d3.select('#probeklausur-08').graphviz().renderDot(`
+    d3.select('#probeklausur-08').append('div').graphviz().renderDot(`
             graph {
                 node [style="filled" fillcolor=darkgreen]
                 Elefant -- {Maus, Armin} 
                 Maus -- {Armin, Ente}
                 Armin -- Ente
             }
-        `)
+    `)
+
+    d3.select('#probeklausur-08').append('div').graphviz().renderDot(`
+            digraph {
+                A; B; C;
+                
+                subgraph {
+                    edge [dir=none, color=red]
+                    A -> B -> C -> A
+                }
+
+                subgraph {
+                    edge [color=blue]
+                    B -> C
+                    C -> A
+                }
+            }
+    `)
 }
 
 
